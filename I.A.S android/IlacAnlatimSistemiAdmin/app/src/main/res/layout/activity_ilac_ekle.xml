@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#0DBCA9"
+    tools:context="com.example.emku.ilacanlatimsistemiadmin.ilac_ekle">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/ust_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#47AA9F">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/logo"
+            android:layout_margin="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="İlaç Ekle"
+            android:textSize="16dp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-smallcaps"
+            />
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:background="@drawable/layout_border"
+        android:layout_margin="20dp">
+        <RelativeLayout
+            android:id="@+id/layout_ilac_adi"
+            android:layout_margin="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/editText_ilac_adi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:hint="İlaç Adı"/>
+            </android.support.design.widget.TextInputLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layout_ilac_turu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginBottom="30dp"
+            android:layout_below="@id/layout_ilac_adi">
+            <Spinner
+                android:id="@+id/spinner_ilac_turu"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layout_ilac_kullanimi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_below="@id/layout_ilac_turu">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/editText_ilac_kullanimi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="İlaç Kullanım Talimatı"
+                    android:textSize="16dp"
+                    android:gravity="top"
+                    android:textColorHint="@android:color/holo_orange_light"/>
+            </android.support.design.widget.TextInputLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layout_ilac_url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_below="@id/layout_ilac_kullanimi">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/editText_url"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:hint="İlaç Url"></EditText>
+            </android.support.design.widget.TextInputLayout>
+        </RelativeLayout>
+        <Button
+            android:id="@+id/btn_kaydet"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="KAYDET"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="30dp"
+            android:background="@android:color/holo_orange_light"
+            android:layout_below="@id/layout_ilac_url"/>
+    </RelativeLayout>
+</RelativeLayout>

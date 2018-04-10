@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.emku.ilacanlatimsistemiadmin.islem_yap">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/ust_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#47AA9F">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/logo"
+            android:layout_margin="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="İŞİTME ENGELLİ İ.A.S Yönetim"
+            android:textSize="16dp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-smallcaps"
+            />
+    </android.support.v7.widget.Toolbar>
+    <RelativeLayout
+        android:layout_below="@id/ust_bar"
+        android:background="@drawable/arkaplan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/layout_butonlar"
+            android:layout_width="100dp"
+            android:layout_height="380dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_alignParentLeft="true">
+            <ImageView
+                android:id="@+id/img_ilac_tara"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="40dp"
+                android:textColor="#FFFFFF"
+                android:text="İlaç Tara"
+                android:src="@drawable/tara"
+                />
+            <ImageView
+                android:id="@+id/img_ilac_ekle"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ilac_ekle"
+                android:layout_marginBottom="40dp"
+                android:layout_below="@id/img_ilac_tara"
+
+                />
+            <ImageView
+                android:id="@+id/img_ilac_sil"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ilac_sil"
+
+                android:layout_below="@id/img_ilac_ekle"
+
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

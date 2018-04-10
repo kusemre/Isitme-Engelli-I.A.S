@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">İşitme Engelli İ.A.S Yönetim</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <item name="visible" type="id" />
+    <item name="masked" type="id" />
+</resources>
